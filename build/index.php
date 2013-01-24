@@ -53,7 +53,7 @@
                 <h2>50 projects, 500 images, 10 videos, domain building, and technical support.</h2>
             </header>
             
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" role="main">
                 
                 <ol>
                     <li>
@@ -83,6 +83,7 @@
                     </li>
                     <li>
                         <h3 id="payment-info-header">Finally, enter your payment information</h3>
+                        <a href="#">Use PayPal</a>
                         <fieldset name="payment-info" aria-labelledby="payment-info-header">
                             <label for="card-num">Card Number</label>
                             <input type="text" id="name" name="name" />
@@ -92,7 +93,7 @@
                             
                             <label for="month">Expiration Date</label>
                             <select name="month" id="month">
-                                <option value="00" disabled>Month</option>
+                                <option value="00" disabled selected>Month</option>
                                 <option value="01">January</option>
                                 <option value="02">February</option>
                                 <option value="03">March</option>
@@ -107,7 +108,7 @@
                                 <option value="12">December</option>
                             </select>
                             <select name="month" id="month">
-                                <option value="00" disabled>Year</option>
+                                <option value="00" disabled selected>Year</option>
                                 <option value="01">2013</option>
                                 <option value="02">2014</option>
                                 <option value="03">2015</option>
@@ -118,16 +119,8 @@
                         </fieldset>
                     </li>                    
                 </ol>
-                    
-                <!--    
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" minlength="2"/>
                 
-                <label for="name">E-mail</label>
-                <input type="email" id="email" name="email" minlength="2"/>
-                
-                <button type="submit" name="send">Send!</button>
-                -->
+                <button type="submit" name="create-portfolio">Create your portfolio</button>
                 
             </form>
         </div>

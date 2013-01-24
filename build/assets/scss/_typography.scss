@@ -1,0 +1,53 @@
+/* =Typography
+-------------------------------------------------------------- */
+
+body {
+    font: 62.5% $body-font;
+    color: $dark-grey; 
+}
+
+a {
+    font-size: 1.2em;
+    color: #72d0ff;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1, h3 {
+    font-family: $header-font;
+}
+
+h1 {
+    font-size: 3.6em;
+    color: $light-blue;
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: bold;
+    color: $medium-blue;
+}
+
+h3 {
+    font-size: 2em;
+    color: $dark-blue;
+}
+
+fieldset div {
+    font-size: 1em;
+    color: $medium-grey;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+ol > li:before {
+    font-size: 1.6em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
