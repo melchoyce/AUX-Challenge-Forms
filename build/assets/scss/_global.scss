@@ -1,0 +1,144 @@
+/*
+
+   =Apprenticeship in User Experience Program
+   Challenge 1: Forms
+      
+                            __
+         o                 /' ) 
+                         /'   (                          ,
+                     __/'     )                        .' `;
+      o      _.-~~~~'          ``---..__             .'   ;
+        _.--'  b)                       ``--...____.'   .'
+       (     _.      )).      `-._                     <
+        `\|\|\|\|)-.....___.-     `-.         __...--'-.'.
+          `---......_______,,,`.___.'----... .'         `.;
+                                            `-`           ` 
+   
+   Mel Choyce
+   http://melchoyce.github.com/AUX-Challenge-Form/
+   http://choycedesign.com
+
+*/
+
+
+* {
+    @include border-box;
+}
+
+html {
+    height: 100%;
+    background: #b3e3ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b3e3ff 0%, #abe0ff 97%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3e3ff), color-stop(97%,#abe0ff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #b3e3ff 0%,#abe0ff 97%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #b3e3ff 0%,#abe0ff 97%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #b3e3ff 0%,#abe0ff 97%); /* IE10+ */
+    background: linear-gradient(to bottom,  #b3e3ff 0%,#abe0ff 97%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3e3ff', endColorstr='#abe0ff',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+    font: 62.5% Lucida Grande, Arial, Verdana, sans-serif;
+    color: #5a5a5a; 
+}
+
+h1, h3 {
+    font-family: 'Antic Slab', georgia, serif;
+}
+
+h1 {
+    font-size: 3.6em;
+    color: #f1fcff;
+}
+
+h2 {
+    margin-top: .5em;
+    font-size: 1em;
+    font-weight: bold;
+    color: #b4e3ff;
+}
+
+h3 {
+    font-size: 20px;
+    color: #234b61;
+}
+
+ol {
+    
+}
+
+
+/* =Form Styling
+-------------------------------------------------------------- */
+
+form {
+    padding: 3em 4em 4em;
+}
+
+fieldset {
+    margin-top: 1em;
+    padding: 3em 4em;
+    background-color: #f3f5f5; 
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+fieldset div {
+    font-size: 1em;
+    color: #a2a2a2;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    padding: .5em;
+    height: 35px;
+    width: 100%;
+    border-top: 2px solid #cbcbcb;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+/* =Structure
+-------------------------------------------------------------- */
+
+#container {
+    margin: 1.5em auto 0; /* 15px */
+    max-width: 600px;
+    background-color: white;
+    -webkit-border-radius:  5px;
+    border-radius:          5px;
+}
+
+#container header {
+    padding: 3em 4em 2.5em;
+    width: 100%;
+    -webkit-box-shadow:     inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+    -moz-box-shadow:        inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+    box-shadow:             inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+    background: #167893; /* Old browsers */
+    background: -moz-linear-gradient(top,  #167893 0%, #125e77 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#167893), color-stop(100%,#125e77)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #167893 0%,#125e77 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #167893 0%,#125e77 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #167893 0%,#125e77 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #167893 0%,#125e77 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#167893', endColorstr='#125e77',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #146c86;
+    -webkit-border-radius:  5px 5px 0 0;
+    border-radius:          5px 5px 0 0;
+}
+
+li:nth-of-type(1),
+li:nth-of-type(2) {
+    margin-bottom: 4em;
+}

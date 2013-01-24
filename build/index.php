@@ -5,7 +5,7 @@
     <title>AUX Forms Challenge</title>
     
     <!-- CSS -->
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
@@ -57,8 +57,8 @@
                 
                 <ol>
                     <li>
-                        <h3>First, name your portfolio</h3>
-                        <fieldset name="portfolio-details">
+                        <h3 id="portfolio-details-header">First, name your portfolio</h3>
+                        <fieldset name="portfolio-details" aria-labelledby="portfolio-details-header">
                             <label for="portfolio-title">Portfolio Title</label>
                             <input type="text" id="portfolio-title" name="portfolio-title" />
                             
@@ -67,8 +67,8 @@
                         </fieldset>
                     </li>
                     <li>
-                        <h3>Now, enter your account details</h3>
-                        <fieldset name="acct-details">
+                        <h3 id="acct-details-header">Now, enter your account details</h3>
+                        <fieldset name="acct-details" aria-labelledby="acct-details-header">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" />
                             
@@ -82,8 +82,8 @@
                         </fieldset>
                     </li>
                     <li>
-                        <h3>Finally, enter your payment information</h3>
-                        <fieldset name="payment-info">
+                        <h3 id="payment-info-header">Finally, enter your payment information</h3>
+                        <fieldset name="payment-info" aria-labelledby="payment-info-header">
                             <label for="card-num">Card Number</label>
                             <input type="text" id="name" name="name" />
                             
