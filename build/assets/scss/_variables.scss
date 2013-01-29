@@ -8,7 +8,18 @@ $medium-grey:       #a2a2a2; // caption color
 $dark-blue:         #234b61; // h3 colors
 $medium-blue:       #b4e3ff; // h2 color
 $light-blue:        #f1fcff; // h1 color
+$bright-blue:		#52a3d4; // li + focus color
+$red:				#f00; // error message
 
+// Scheme
+$body-color: 		$dark-grey;
+$fieldset-bg:		$light-grey;
+$caption-color:		$medium-grey;
+$h1:				$light-blue;
+$h2:				$medium-blue;
+$h3:				$dark-blue;
+$highlight:			$bright-blue;
+$error:				$red;
 
 // Typography
 $body-font:         Lucida Grande, Arial, Verdana, sans-serif;

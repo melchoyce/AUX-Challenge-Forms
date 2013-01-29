@@ -24,8 +24,8 @@
             $emailFrom = strip_tags($_POST['email']);
             
             // who you're sending the email to (probably change this)
-            $emailTo = "apprentices@freshtilledsoil.com";
-            $subject = "Submission";
+            $emailTo = "mel.choyce@freshtilledsoil.com";
+            $subject = "Form Challenge";
             
             // inset information into the body of the email
             $body = "Name: ".$name."\n";
@@ -49,8 +49,10 @@
         
         <div id="container">
             <header role="banner">
-                <h1>Sign up for Whoo!</h1>
-                <h2>50 projects, 500 images, 10 videos, domain building, and technical support.</h2>
+                <hgroup>
+                    <h1>Sign up for Whoo!</h1>
+                    <h2>50 projects, 500 images, 10 videos, domain building, and technical support.</h2>
+                </hgroup>
             </header>
             
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" role="main">
@@ -60,39 +62,46 @@
                         <h3 id="portfolio-details-header">First, name your portfolio</h3>
                         <fieldset name="portfolio-details" aria-labelledby="portfolio-details-header">
                             <label for="portfolio-title">Portfolio Title</label>
-                            <input type="text" id="portfolio-title" name="portfolio-title" />
+                            <input type="text" id="portfolio-title" name="portfolio-title" pattern="[a-zA-Z]+" aria-required="true" required />
                             
-                            <label for="portfolio-addr">Portfolio Address</label>
-                            <input type="text" id="portfolio-addr" name="portfolio-addr" pattern="[A-Za-z]" />
+                            <div id="url">
+                                <label for="portfolio-addr">Portfolio Address</label>
+                                <input type="text" id="sample-url" name="sample-url" value=".sample.com" disabled />
+                                <input type="text" id="portfolio-addr" name="portfolio-addr" pattern="[a-zA-Z]+" aria-required="true" required />
+                            </div>
                         </fieldset>
                     </li>
                     <li>
                         <h3 id="acct-details-header">Now, enter your account details</h3>
                         <fieldset name="acct-details" aria-labelledby="acct-details-header">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" />
+                            <input type="text" id="name" name="name" pattern="[a-zA-Z]+" aria-required="true" required />
                             
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" aria-describedby="email-description" />
-                            <div id="email-description">NOTE: We'll never share your email, promise.</div>
+                            <input type="email" id="email" name="email" aria-describedby="email-description" aria-required="true" required />
+                            <span id="email-description">NOTE: We'll never share your email, promise.</span>
                             
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" data-typetoggle='#checkbox' />
-                            <input id="checkbox" type="checkbox" /><label>Show password</label>
+                            <input type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" data-typetoggle="#show-password" aria-required="true" required />
                         </fieldset>
                     </li>
                     <li>
-                        <h3 id="payment-info-header">Finally, enter your payment information</h3>
-                        <a href="#">Use PayPal</a>
+                        <h3 id="payment-info-header">Finally, enter your payment information <a href="#" title="pay using paypal">Use PayPal</a></h3>
                         <fieldset name="payment-info" aria-labelledby="payment-info-header">
-                            <label for="card-num">Card Number</label>
-                            <input type="text" id="name" name="name" />
+                            <div id="credit-card">
+                                <label for="card-num">Card Number</label>
+                                <input type="text" id="card-num" name="card-num" pattern="[0-9]{13,16}" aria-required="true" autocomplete="off" required />
+                                <div id="card-icons"></div>
+                            </div>
                             
-                            <label for="security-code">Security Code</label>
-                            <input type="email" id="email" name="email" />
+                            <div id="security">
+                                <label for="security-code">Security Code</label>
+                                <input type="text" id="security-code" name="security-code" maxlength="4" pattern="[0-9]{3,4}" aria-required="true" autocomplete="off" required />
+                                <div id="security-icon"></div>
+                            </div>
                             
                             <label for="month">Expiration Date</label>
-                            <select name="month" id="month">
+                            <select name="month" id="month" aria-required="true">
                                 <option value="00" disabled selected>Month</option>
                                 <option value="01">January</option>
                                 <option value="02">February</option>
@@ -107,7 +116,7 @@
                                 <option value="11">November</option>
                                 <option value="12">December</option>
                             </select>
-                            <select name="month" id="month">
+                            <select name="year" id="year" aria-required="true">
                                 <option value="00" disabled selected>Year</option>
                                 <option value="01">2013</option>
                                 <option value="02">2014</option>
@@ -131,7 +140,6 @@
 
     <!-- JS -->
     <script src="assets/js/lib/jquery.js" type="text/javascript"></script>
-    <script src="assets/js/lib/jquery.showpassword.js" type="text/javascript"></script>
     <script src="assets/js/lib/jquery.validate.js" type="text/javascript"></script>
     <script src="assets/js/lib/modernizr.js" type="text/javascript"></script>
     <script type="text/javascript">

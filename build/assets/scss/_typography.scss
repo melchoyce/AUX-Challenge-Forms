@@ -3,7 +3,7 @@
 
 body {
     font: 62.5% $body-font;
-    color: $dark-grey; 
+    color: $body-color; 
 }
 
 a {
@@ -22,23 +22,42 @@ h1, h3 {
 
 h1 {
     font-size: 3.6em;
-    color: $light-blue;
+    color: $h1;
 }
 
 h2 {
     font-size: 1em;
     font-weight: bold;
-    color: $medium-blue;
+    color: $h2;
 }
 
 h3 {
     font-size: 2em;
-    color: $dark-blue;
+    color: $h3;
 }
 
-fieldset div {
+h3 a {
+    font-family: $body-font;
+    font-size: .6em;
+    font-weight: bold;
+}
+
+button {
+    font-family: $header-font;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    text-shadow: -1px -1px 0px rgba(0,0,0,.1);
+}
+
+#sample-url {
+    color: #9a9aa0;
+    text-align: center;   
+}
+
+#email-description {
     font-size: 1em;
-    color: $medium-grey;
+    color: $caption-color;
 }
 
 label {
