@@ -314,7 +314,6 @@ li:nth-of-type(3) fieldset {
 #card-icons {
   float: left;
   margin-top: .1em;
-  background: url("../images/sprite.png") no-repeat 0 -122px;
   width: 19em;
   height: 3.2em; }
 
@@ -325,7 +324,6 @@ li:nth-of-type(3) fieldset {
 #security-icon {
   float: left;
   margin-top: .2em;
-  background: url("../images/sprite.png") no-repeat 0 -374px;
   width: 6.2em;
   height: 3.2em; }
 
@@ -336,3 +334,19 @@ li:nth-of-type(3) fieldset {
 
 #year {
   margin-left: .5em; }
+
+/* =Credit Card Items
+-------------------------------------------------------------- */
+#card-icons {
+  background: url("../images/sprite.png") no-repeat 0 -122px; }
+  #card-icons .amex {
+    background-position: 0 -164px; }
+  #card-icons .visa {
+    background-position: 0 -206px; }
+  #card-icons .discover {
+    background-position: 0 -248px; }
+  #card-icons .mastercard {
+    background-position: 0 -290px; }
+
+#security-icon {
+  background: url("../images/sprite.png") no-repeat 0 -374px; }
