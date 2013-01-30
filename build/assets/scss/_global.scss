@@ -29,7 +29,7 @@ form {
     padding: 3em 4em 4em;
 }
 
-fieldset {
+.form-step-container {
     margin: 1em 0 0 0;
     padding: .5em 4em 4em;
     background-color: $fieldset-bg; 
@@ -155,10 +155,8 @@ ol {
     display: block;
 }
 
-li:nth-of-type(3) {
-    fieldset {
-        background: $light-grey url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAATCAMAAACX3symAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxQTYxNjc4MzVGMzYxMUUyOTY3RUNDODExMjdCMDM2MiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQTYxNjc4NDVGMzYxMUUyOTY3RUNDODExMjdCMDM2MiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFBNjE2NzgxNUYzNjExRTI5NjdFQ0M4MTEyN0IwMzYyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFBNjE2NzgyNUYzNjExRTI5NjdFQ0M4MTEyN0IwMzYyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yuM1YwAAAIFQTFRF2Nra/Pz8/f391tjY2tzc3uDg4+Tk/v7+8PHx9PT0+vr61NfX5+jo+/z81dfX293d7e7u2dvb6erq19nZ5Obm5OXl3d/f+/v7+Pj49fb27u/v8/T04uTk7O3t9/f36Onp6+zs9fX13N7e5ujo6uvr4eLi8vPz5ufn5ebm1NbW////1Vsg4wAAACt0Uk5T////////////////////////////////////////////////////////ACPJp9AAAACSSURBVHjaZM4HDsMgDAVQJ9ACzU66924+9z9gbVKRSP0Ssh9CNuQ5t9V9nRfSEZ8Wks4NtNw3CqAksAKsN0vgKTTAjJ8lwEuYAnOZouT2jzWge04JOnuyGKMKekjV9bWTeqAPho3bjJt34FFG6UhteG8ZyZvSCiMbv8CEFJlLyfaXQEdu8g1Kye/a/pfTxn8FGAD6WCKFuWRpLAAAAABJRU5ErkJggg==) no-repeat 97% 95%;
-    }
+#payment-info-header + fieldset {
+    background: $light-grey url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAATCAMAAACX3symAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxQTYxNjc4MzVGMzYxMUUyOTY3RUNDODExMjdCMDM2MiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQTYxNjc4NDVGMzYxMUUyOTY3RUNDODExMjdCMDM2MiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFBNjE2NzgxNUYzNjExRTI5NjdFQ0M4MTEyN0IwMzYyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFBNjE2NzgyNUYzNjExRTI5NjdFQ0M4MTEyN0IwMzYyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yuM1YwAAAIFQTFRF2Nra/Pz8/f391tjY2tzc3uDg4+Tk/v7+8PHx9PT0+vr61NfX5+jo+/z81dfX293d7e7u2dvb6erq19nZ5Obm5OXl3d/f+/v7+Pj49fb27u/v8/T04uTk7O3t9/f36Onp6+zs9fX13N7e5ujo6uvr4eLi8vPz5ufn5ebm1NbW////1Vsg4wAAACt0Uk5T////////////////////////////////////////////////////////ACPJp9AAAACSSURBVHjaZM4HDsMgDAVQJ9ACzU66924+9z9gbVKRSP0Ssh9CNuQ5t9V9nRfSEZ8Wks4NtNw3CqAksAKsN0vgKTTAjJ8lwEuYAnOZouT2jzWge04JOnuyGKMKekjV9bWTeqAPho3bjJt34FFG6UhteG8ZyZvSCiMbv8CEFJlLyfaXQEdu8g1Kye/a/pfTxn8FGAD6WCKFuWRpLAAAAABJRU5ErkJggg==) no-repeat 97% 95%;
 }
 
 #credit-card, #security {
@@ -168,8 +166,18 @@ li:nth-of-type(3) {
 }
 
 #card-num {
+    float: left;
     margin-right: 1em;
-    max-width: 24em;
+    width: 24em;
+}
+
+#card-num {
+    &+ fieldset {
+        display: inline-block;
+        float: left;
+        margin-top: 2.4em;
+    }
+
 }
 
 #card-icons {
@@ -187,11 +195,15 @@ li:nth-of-type(3) {
 #security-icon {
     float: left;
     margin-top: .2em;
-	width: 6.2em;
-	height: 3.2em;
+    width: 6.2em;
+    height: 3.2em;
 }
 
-#card-num,
+#card-num {
+    @include clearfix;
+}
+
+#card-num input,
 #security-code {
     margin-top: 0;
     float: left;
@@ -204,27 +216,59 @@ li:nth-of-type(3) {
 /* =Credit Card Items
 -------------------------------------------------------------- */
 
-#card-icons {
-    background: url('../images/sprite.png') no-repeat 0 -122px;
+.card-list {
+    margin-top: 1em;
 
-    .amex {
-        background-position: 0 -164px;
+    li,
+    li label,
+    li input {
+        display: inline-block;
+    }
+    > li label {
+        text-indent: -2000px;
+        margin: 0;
+        padding: 0;
+        width: 45px;
+        height: 32px;
+        background-image: url('../images/sprite.png');
+        background-repeat: no-repeat;
+        cursor: pointer;
     }
 
-    .visa {
-        background-position: 0 -206px; 
+    li input[type="radio"] {
+        display: none;
     }
 
-    .discover {
-        background-position: 0 -248px;
+    .amex label {
+        background-position: 0 -42px;
+    }
+    .amex input:checked + label {
+            background-position: 0 0;
     }
 
-    .mastercard {
-        background-position: 0 -290px;
+    .visa label {
+        background-position: -48px -42px;
+    }
+    .visa input:checked + label {
+        background-position: -48px 0;
+    }
+
+    .discover label {
+        background-position: -96px -42px;
+    }
+    .discover input:checked + label {
+        background-position: -96px 0;
+    }
+
+    .mastercard label {
+        background-position: -144px -42px;
+    }
+    .mastercard input:checked + label {
+        background-position: -144px 0;
     }
 
 }
 
 #security-icon {
-    background: url('../images/sprite.png') no-repeat 0 -374px;
+    background: url('../images/sprite.png') no-repeat -80px -84px;
 }

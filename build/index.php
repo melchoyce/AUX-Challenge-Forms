@@ -60,7 +60,7 @@
                 <ol>
                     <li>
                         <h3 id="portfolio-details-header">First, name your portfolio</h3>
-                        <fieldset name="portfolio-details" aria-labelledby="portfolio-details-header">
+                        <fieldset class="form-step-container" name="portfolio-details" aria-labelledby="portfolio-details-header">
                             <label for="portfolio-title">Portfolio Title</label>
                             <input type="text" id="portfolio-title" name="portfolio-title" pattern="[a-zA-Z]+" aria-required="true" required />
                             
@@ -73,7 +73,7 @@
                     </li>
                     <li>
                         <h3 id="acct-details-header">Now, enter your account details</h3>
-                        <fieldset name="acct-details" aria-labelledby="acct-details-header">
+                        <fieldset class="form-step-container" name="acct-details" aria-labelledby="acct-details-header">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" pattern="[a-zA-Z]+" aria-required="true" required />
                             
@@ -87,11 +87,34 @@
                     </li>
                     <li>
                         <h3 id="payment-info-header">Finally, enter your payment information <a href="#" title="pay using paypal">Use PayPal</a></h3>
-                        <fieldset name="payment-info" aria-labelledby="payment-info-header">
+                        <fieldset class="form-step-container" name="payment-info" aria-labelledby="payment-info-header">
                             <div id="credit-card">
-                                <label for="card-num">Card Number</label>
-                                <input type="text" id="card-num" name="card-num" pattern="[0-9]{13,16}" aria-required="true" autocomplete="off" required />
-                                <div id="card-icons"></div>
+                                <div id="card-num">
+                                    <label for="card-num">Card Number</label>
+                                    <input type="text" name="card-num" pattern="[0-9]{13,16}" aria-required="true" autocomplete="off" required />
+                                </div>
+                                <fieldset>
+                                    <legend>Select your credit card</legend>
+                                    <ul class="card-list">
+                                        <li class="amex">
+                                            <input type="radio" name="card-icon" id="amex" />
+                                            <label for="amex">American Express</label>
+                                            
+                                        </li>
+                                        <li class="visa">
+                                            <input type="radio" name="card-icon" id="visa" />
+                                            <label for="visa">Visa</label>
+                                        </li> 
+                                        <li class="discover">
+                                            <input type="radio" name="card-icon" id="discover" />
+                                            <label for="discover">Discover</label>
+                                        </li>
+                                        <li class="mastercard">
+                                            <input type="radio" name="card-icon" id="mastercard" />
+                                            <label for="mastercard">Mastercard</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
                             </div>
                             
                             <div id="security">
