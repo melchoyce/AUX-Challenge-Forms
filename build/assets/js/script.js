@@ -27,6 +27,8 @@ function getCreditCardType(accountNumber) {
 
   }
 
-  return result;
+  return result;  
 
 }
+
+// capture event + attach function to it
