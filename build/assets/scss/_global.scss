@@ -94,6 +94,11 @@ button {
     }
 }
 
+.error {
+    @include clearfix;
+    clear: left;
+    margin: 5px 0 0 0;
+}
 
 /* =List Styling
 -------------------------------------------------------------- */
@@ -173,13 +178,14 @@ ol {
     width: 100%;
 }
 
-#card-num {
+#card-number {
+    @include clearfix;
     float: left;
     margin-right: 1em;
     width: 24em;
 }
 
-#card-num {
+#card-number {
     &+ fieldset {
         display: inline-block;
         float: left;
@@ -207,11 +213,7 @@ ol {
     height: 3.2em;
 }
 
-#card-num {
-    @include clearfix;
-}
-
-#card-num input,
+#card-number input,
 #security-code {
     margin-top: 0;
     float: left;
@@ -244,7 +246,14 @@ ol {
     }
 
     li input[type="radio"] {
-        display: none;
+        border: 0; 
+        clip: rect(0 0 0 0); 
+        height: 1px; 
+        margin: -1px; 
+        overflow: hidden; 
+        padding: 0; 
+        position: absolute; 
+        width: 1px;
     }
 
     .amex label {

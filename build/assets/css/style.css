@@ -76,6 +76,9 @@ a {
   a:hover {
     text-decoration: underline; }
 
+em {
+  font-style: italic; }
+
 h1, h3 {
   font-family: "Antic Slab", georgia, serif; }
 
@@ -112,7 +115,8 @@ button {
   font-size: 1em;
   color: #a2a2a2; }
 
-label {
+label,
+legend {
   font-size: 1.2em; }
 
 ol > li:before {
@@ -123,6 +127,9 @@ ol > li:before {
 
 #card-num + fieldset legend {
   font-size: 1.2em; }
+
+.error {
+  color: red; }
 
 /* =Global
 -------------------------------------------------------------- */
@@ -239,6 +246,16 @@ button {
     background: -o-linear-gradient(top, #7b992b, #90a933);
     background: linear-gradient(top, #7b992b, #90a933); }
 
+.error {
+  *zoom: 1;
+  clear: left;
+  margin: 5px 0 0 0; }
+  .error:before, .error:after {
+    content: " ";
+    display: table; }
+  .error:after {
+    clear: both; }
+
 /* =List Styling
 -------------------------------------------------------------- */
 ol {
@@ -321,12 +338,18 @@ ol {
   #credit-card:after, #security:after {
     clear: both; }
 
-#card-num {
+#card-number {
+  *zoom: 1;
   float: left;
   margin-right: 1em;
   width: 24em; }
+  #card-number:before, #card-number:after {
+    content: " ";
+    display: table; }
+  #card-number:after {
+    clear: both; }
 
-#card-num + fieldset {
+#card-number + fieldset {
   display: inline-block;
   float: left;
   margin-top: 2.4em; }
@@ -347,15 +370,7 @@ ol {
   width: 6.2em;
   height: 3.2em; }
 
-#card-num {
-  *zoom: 1; }
-  #card-num:before, #card-num:after {
-    content: " ";
-    display: table; }
-  #card-num:after {
-    clear: both; }
-
-#card-num input,
+#card-number input,
 #security-code {
   margin-top: 0;
   float: left; }
@@ -381,7 +396,14 @@ ol {
     background-repeat: no-repeat;
     cursor: pointer; }
   .card-list li input[type="radio"] {
-    display: none; }
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
   .card-list .amex label {
     background-position: 0 -42px; }
   .card-list .amex input:checked + label {

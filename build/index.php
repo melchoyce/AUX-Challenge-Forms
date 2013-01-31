@@ -9,44 +9,11 @@
     
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
 
-    <?php
-        // if the form has been submitted, process it - otherwise, just display the form normally
-        if(isset($_POST['send'])){
-            
-            // pull the name out of the submitted for
-            $name = strip_tags($_POST['name']);
-            
-            // pull the email out of the submitted form
-            $emailFrom = strip_tags($_POST['email']);
-            
-            // who you're sending the email to (probably change this)
-            $emailTo = "mel.choyce@freshtilledsoil.com";
-            $subject = "Form Challenge";
-            
-            // inset information into the body of the email
-            $body = "Name: ".$name."\n";
-            $body .= "Email: ".$emailFrom."\n";
-            
-            // set the email headers
-            $headers = "From: ".$emailFrom."\n";
-            $headers .= "Reply-To:".$emailFrom."\n";	
-            
-            $success = mail($emailTo, $subject, $body, $headers);
-            
-            // this is the message that gets displayed after submission
-            if ($success){
-                echo 'sent';
-            } else {
-                echo 'not sent';
-            }
-        
-        } else {
-    ?>
-        
         <div id="container">
             <header role="banner">
                 <hgroup>
@@ -55,7 +22,7 @@
                 </hgroup>
             </header>
             
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" role="main">
+            <form id="whoo-form" method="post" role="main">
                 
                 <ol>
                     <li>
@@ -89,9 +56,9 @@
                         <h3 id="payment-info-header">Finally, enter your payment information <a href="#" title="pay using paypal">Use PayPal</a></h3>
                         <fieldset class="form-step-container" name="payment-info" aria-labelledby="payment-info-header">
                             <div id="credit-card">
-                                <div id="card-num">
+                                <div id="card-number">
                                     <label for="card-num">Card Number</label>
-                                    <input type="text" name="card-num" pattern="[0-9]{13,16}" aria-required="true" autocomplete="off" required />
+                                    <input type="text" name="card-num" id="card-num" pattern="[0-9]{13,16}" aria-required="true" autocomplete="off" required />
                                 </div>
                                 <fieldset>
                                     <legend>Select your credit card</legend>
@@ -156,17 +123,52 @@
                 
             </form>
         </div>
-    
-    <?php
-        }
-    ?>
 
     <!-- JS -->
-    <script src="assets/js/lib/jquery.js" type="text/javascript"></script>
-    <script src="assets/js/lib/jquery.validate.js" type="text/javascript"></script>
     <script src="assets/js/lib/modernizr.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $('#text').showPassword();
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#whoo-form").validate({
+                onkeyup: false,
+                //onfocusout: true,
+                rules: {
+                    "email": {
+
+                    }
+                },
+                messages: {
+                    "portfolio-title": "Please enter a name for your portfolio",
+                    "portfolio-addr": "Please enter the address you would like to use for your portfolio<br /><em>(it will be displayed as [address].sample.com)</em>",
+                    "name": "Please enter your full name",
+                    "email": "Please enter a valid email address",
+                    "password": "Please create a password",
+                    "card-num": "Please enter a valid card number",
+                    "security-code": "Please enter the security code located on your card"
+                },
+                errorPlacement: function(error, element) {
+                    if(element.attr("name") == "email") {
+
+                        error.insertAfter( $("#email-description") );
+
+                    } else if(element.attr("name") == "card-num") {
+
+                        error.insertAfter( $("#credit-card") );
+
+                    } else if (element.attr("name") == "security-code") {
+
+                        error.insertAfter( $("#security") );
+
+                    } else {
+
+                        // the default error placement for the rest
+                        error.insertAfter(element);
+
+                    }
+                }
+            });
+        });
     </script>
     
 </body>

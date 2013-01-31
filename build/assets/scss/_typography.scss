@@ -16,6 +16,10 @@ a {
     }
 }
 
+em {
+    font-style: italic;
+}
+
 h1, h3 {
     font-family: $header-font;
 }
@@ -60,7 +64,8 @@ button {
     color: $caption-color;
 }
 
-label {
+label,
+legend {
     font-size: 1.2em;
 }
 
@@ -73,4 +78,8 @@ ol > li:before {
 
 #card-num + fieldset legend {
     font-size: 1.2em;
+}
+
+.error {
+    color: red;
 }
