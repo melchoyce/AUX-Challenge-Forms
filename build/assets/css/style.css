@@ -221,6 +221,7 @@ button {
   display: block;
   margin: auto;
   padding: 0.5em 1.5em;
+  background-color: #90a933;
   background: -webkit-linear-gradient(top, #90a933, #7b992b);
   background: -moz-linear-gradient(top, #90a933, #7b992b);
   background: -ms-linear-gradient(top, #90a933, #7b992b);
@@ -235,12 +236,14 @@ button {
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
   cursor: pointer; }
   button:hover {
+    background-color: #abca3c;
     background: -webkit-radial-gradient(top center, ellipse cover, #abca3c, #7d9b32);
     background: -moz-radial-gradient(top center, ellipse cover, #abca3c, #7d9b32);
     background: -ms-radial-gradient(top center, ellipse cover, #abca3c, #7d9b32);
     background: -o-radial-gradient(top center, ellipse cover, #abca3c, #7d9b32);
     background: radial-gradient(top center, ellipse cover, #abca3c, #7d9b32); }
   button:active {
+    background-color: #7b992b;
     background: -webkit-linear-gradient(top, #7b992b, #90a933);
     background: -moz-linear-gradient(top, #7b992b, #90a933);
     background: -ms-linear-gradient(top, #7b992b, #90a933);

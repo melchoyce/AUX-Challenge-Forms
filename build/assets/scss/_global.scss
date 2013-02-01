@@ -81,6 +81,7 @@ button {
     display: block;
     margin: auto;
     padding: .5em 1.5em;
+    background-color: #90a933;
     @include background(linear-gradient(top, #90a933, #7b992b));
     border: 1px solid #7b992b;
     @include border-radius(5px);
@@ -88,9 +89,11 @@ button {
     cursor: pointer;
 
     &:hover {
+        background-color: #abca3c;
         @include background(radial-gradient(top center, ellipse cover, #abca3c, #7d9b32));
     }
     &:active {
+        background-color: #7b992b;
         @include background(linear-gradient(top, #7b992b, #90a933));
     }
 }
