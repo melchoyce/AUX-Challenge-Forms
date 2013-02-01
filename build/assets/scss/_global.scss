@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    background-color: #b3e3ff;
     @include background(linear-gradient(top, #b3e3ff, #abe0ff));
     padding: 0 3em;
 }
@@ -144,6 +145,7 @@ ol {
 #container header {
     padding: 3em 4em 2.5em;
     width: 100%;
+    background-color: #167893;
     @include background(linear-gradient(top, #167893, #125e77));
     @include border-top-radius(5px);
     border: 1px solid #146c86;    
